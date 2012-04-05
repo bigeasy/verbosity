@@ -1,9 +1,19 @@
+html {
+  height: 100%;
+}
 body {
+  margin: 0;
+  background: #efefef;
   font: 300 100%/1.6em "Minion Pro","Palatino","Hoefler Text","Times New Roman",serif;
   color: #444;
   text-align: center;
+  height: 100%;
 }
-
+#wrapper {
+  padding-top: 2em;
+  background: white;
+  padding-bottom: 1px;
+}
 #content {
   text-align: left;
   width: 600px;
@@ -128,4 +138,23 @@ a {
 }
 a:hover {
   text-decoration: underline;
+}
+
+#credits {
+  padding-top: 5em;
+  clear: both;
+  margin: 0;
+  text-align: right;
+  padding-right: 1.5em;
+}
+#credits img {
+float: right; margin-left: 0.5em;
+}
+#credits div {
+  line-height: 1em;
+}
+.mouseprint {
+  clear: both;
+  font-style: italic; 
+  margin-top: 0.72em;
 }

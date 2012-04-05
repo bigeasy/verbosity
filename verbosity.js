@@ -19,7 +19,8 @@ $(function () {
     encoded = escape($(this).val());
   });
   $("#share").click(function () {
-    url = host + encoded
-    location.href = "https://twitter.com/share?url=" + escape(url)
+    url = escape(host + encoded)
+    text = escape("** Put your summary message here **\n\n") 
+    location.href = "https://twitter.com/share?url=" + url + "&text=" + text
   });
 });
