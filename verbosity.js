@@ -10,7 +10,7 @@ $(function () {
     $("#message").remove();
     $("#editor").show();
   }
-  if (location.port === 80) {
+  if (location.protocol.indexOf("http") != -1) {
     host = location.protocol + "//" + location.host + "/?";
   } else {
     host = "http://bigeasy.github.com/verbosity/?";
