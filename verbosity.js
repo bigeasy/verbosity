@@ -11,7 +11,7 @@ $(function () {
     $("#editor").show();
   }
   if (location.protocol.indexOf("http") != -1) {
-    host = location.protocol + "//" + location.host + "/?";
+    host = location.protocol + "//" + location.host + location.pathname + "?";
   } else {
     host = "http://bigeasy.github.com/verbosity/?";
   }
