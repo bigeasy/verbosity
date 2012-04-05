@@ -25,6 +25,10 @@ h1 {
   float: left;
   margin-bottom: 0.5em;
 }
+h1 a{
+	color: #444;
+	text-decoration: none;
+}
 
 h2 {
   font-size: 1em;
