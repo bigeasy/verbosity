@@ -13,8 +13,8 @@ $(function () {
     $("#message").hide();
     $("#editor").show();
   }
-  if (location.port === 80) {
-    host = location.protocol + "//" + location.host + "/?";
+  if (location.protocol.indexOf("http") != -1) {
+    host = location.protocol + "//" + location.host + location.pathname + "?";
   } else {
     host = "http://bigeasy.github.com/verbosity/?";
   }
