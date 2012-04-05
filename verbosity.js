@@ -22,7 +22,7 @@ $(function () {
     text = $(this).val()
   });
   $("#preview").click(function () {
-    encoded = escape(text);
+    encoded = escape(text || "");
     encoded = encoded.replace(/@/g, '%40');
     location.href = host + encoded
     return false;
@@ -37,7 +37,7 @@ $(function () {
     return false;
   });
   $("#share").click(function () {
-    encoded = escape(text);
+    encoded = escape(text || "");
     encoded = encoded.replace(/@/g, '%40');
     url = escape(host + encoded);
     text = escape("** Put your summary message here **\n\n");
