@@ -28,6 +28,7 @@ $(function () {
     return false;
   });
   $("#edit").click(function () {
+    $("#nav").hide();
     $("#message").hide();
     $("#editor").show();
     $("#preview").show();
