@@ -5,6 +5,7 @@ var fs = require('fs');
 var mime = {
   js: "text/javascript",
   html: "text/html",
+  css: "text/css"
 };
 
 http.createServer(function (req, res) {
