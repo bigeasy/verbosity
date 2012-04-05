@@ -17,10 +17,10 @@ $(function () {
   }
   $("#verbiage").keyup(function () {
     encoded = escape($(this).val());
+    encoded = encoded.replace(/@/g, '%40');
   });
   $("#share").click(function () {
     url = escape(host + encoded);
-    url = url.replace(/\@/g, "%40");
     text = escape("** Put your summary message here **\n\n");
     location.href = "https://twitter.com/share?url=" + url + "&text=" + text;
   });
