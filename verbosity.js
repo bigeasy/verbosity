@@ -11,16 +11,17 @@ $(function () {
     $("#editor").show();
   }
   if (location.port === 80) {
-    host = location.protocol + "//" + location.host + "/?"
+    host = location.protocol + "//" + location.host + "/?";
   } else {
-    host = "http://bigeasy.github.com/verbosity/?"
+    host = "http://bigeasy.github.com/verbosity/?";
   }
   $("#verbiage").keyup(function () {
     encoded = escape($(this).val());
   });
   $("#share").click(function () {
-    url = escape(host + encoded)
-    text = escape("** Put your summary message here **\n\n") 
-    location.href = "https://twitter.com/share?url=" + url + "&text=" + text
+    url = escape(host + encoded);
+    url = url.replace(/@/g, "%40");
+    text = escape("** Put your summary message here **\n\n");
+    location.href = "https://twitter.com/share?url=" + url + "&text=" + text;
   });
 });
